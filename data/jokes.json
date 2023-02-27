@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "joke": "¿Qué hace un perro con un taladro? Ta ladrando.",
+    "isFunny": false,
+    "alreadyKnewIt": false
+  },
+  {
+    "id": 2,
+    "joke": "¿Cómo se llama el hermano más limpio de Bruce Willis? Kevin Willis.",
+    "isFunny": false,
+    "alreadyKnewIt": false
+  },
+  {
+    "id": 3,
+    "joke": "Un león se comió un jabón. Y ahora es puma.",
+    "isFunny": false,
+    "alreadyKnewIt": false
+  },
+  {
+    "id": 4,
+    "joke": "¿Cómo queda un mago después de comer? Magordito.",
+    "isFunny": false,
+    "alreadyKnewIt": false
+  },
+  {
+    "id": 5,
+    "joke": "¿Qué hace un mudo bailando? Una mudanza.",
+    "isFunny": false,
+    "alreadyKnewIt": false
+  },
+  {
+    "id": 6,
+    "joke": "¿Qué hace una abeja en un gimnasio? Zumba.",
+    "isFunny": false,
+    "alreadyKnewIt": false
+  },
+  {
+    "id": 7,
+    "joke": "Todo eran risas hasta que nos dimos cuenta de que el tartamudo quería jamón.",
+    "isFunny": false,
+    "alreadyKnewIt": false
+  }
+]
