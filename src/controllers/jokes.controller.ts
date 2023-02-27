@@ -2,7 +2,7 @@ import { Response, Request, NextFunction } from 'express';
 import { Joke } from '../entities/jokes.js';
 import { Repo } from '../repository/repo.interface.js';
 
-export class ThingsController {
+export class JokesController {
   // eslint-disable-next-line no-useless-constructor, no-unused-vars
   constructor(public repo: Repo<Joke>) {}
 
