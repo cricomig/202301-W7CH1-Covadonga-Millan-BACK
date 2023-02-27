@@ -1,5 +1,5 @@
 export type Joke = {
-  id: number;
+  id: string;
   joke: string;
   isFunny: boolean;
   alreadyKnewIt: boolean;
