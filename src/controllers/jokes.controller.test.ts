@@ -22,7 +22,7 @@ describe('Given ThingsController', () => {
 
   const controller = new JokesController(repo);
 
-  describe('getAll', () => {
+  describe('when we use getAll', () => {
     test('Then it should ... if there ara NOT errors', async () => {
       await controller.getAll(req, resp, next);
       expect(repo.query).toHaveBeenCalled();
@@ -32,6 +32,66 @@ describe('Given ThingsController', () => {
     test('Then it should ... if there are errors', async () => {
       (repo.query as jest.Mock).mockRejectedValue(new Error());
       await controller.getAll(req, resp, next);
+      expect(repo.query).toHaveBeenCalled();
+      expect(next).toHaveBeenCalled();
+    });
+  });
+
+  describe('when we use get', () => {
+    test('Then it should ... if there ara NOT errors', async () => {
+      await controller.get(req, resp, next);
+      expect(repo.query).toHaveBeenCalled();
+      expect(resp.json).toHaveBeenCalled();
+    });
+
+    test('Then it should ... if there are errors', async () => {
+      (repo.query as jest.Mock).mockRejectedValue(new Error());
+      await controller.get(req, resp, next);
+      expect(repo.query).toHaveBeenCalled();
+      expect(next).toHaveBeenCalled();
+    });
+  });
+
+  describe('when we use post', () => {
+    test('Then it should ... if there ara NOT errors', async () => {
+      await controller.post(req, resp, next);
+      expect(repo.query).toHaveBeenCalled();
+      expect(resp.json).toHaveBeenCalled();
+    });
+
+    test('Then it should ... if there are errors', async () => {
+      (repo.query as jest.Mock).mockRejectedValue(new Error());
+      await controller.post(req, resp, next);
+      expect(repo.query).toHaveBeenCalled();
+      expect(next).toHaveBeenCalled();
+    });
+  });
+
+  describe('when we use patch', () => {
+    test('Then it should ... if there ara NOT errors', async () => {
+      await controller.patch(req, resp, next);
+      expect(repo.query).toHaveBeenCalled();
+      expect(resp.json).toHaveBeenCalled();
+    });
+
+    test('Then it should ... if there are errors', async () => {
+      (repo.query as jest.Mock).mockRejectedValue(new Error());
+      await controller.patch(req, resp, next);
+      expect(repo.query).toHaveBeenCalled();
+      expect(next).toHaveBeenCalled();
+    });
+  });
+
+  describe('when we use delete', () => {
+    test('Then it should ... if there ara NOT errors', async () => {
+      await controller.delete(req, resp, next);
+      expect(repo.query).toHaveBeenCalled();
+      expect(resp.json).toHaveBeenCalled();
+    });
+
+    test('Then it should ... if there are errors', async () => {
+      (repo.query as jest.Mock).mockRejectedValue(new Error());
+      await controller.delete(req, resp, next);
       expect(repo.query).toHaveBeenCalled();
       expect(next).toHaveBeenCalled();
     });
