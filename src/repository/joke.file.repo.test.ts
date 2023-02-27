@@ -66,6 +66,18 @@ describe('Given ThingsFileRepo', () => {
       ).rejects.toThrow();
       expect(fs.readFile).toHaveBeenCalled();
     });
+
+    test('Then it should throw an error', async () => {
+      (fs.readFile as jest.Mock).mockResolvedValue(
+        '[{"id": "2", "joke": "patata"}]'
+      );
+      const id: Partial<Joke> = {
+        joke: 'patata',
+      };
+
+      expect(async () => repo.update(id)).rejects.toThrowError();
+      expect(fs.readFile).toHaveBeenCalled();
+    });
   });
 
   describe('When we use destroy', () => {
