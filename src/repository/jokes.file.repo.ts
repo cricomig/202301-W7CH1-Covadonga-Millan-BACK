@@ -19,7 +19,6 @@ export class JokesFileRepo implements Repo<Joke> {
   }
 
   async create(info: Partial<Joke>): Promise<Joke> {
-    // Future if (!validateInfo(info)) throw new Error('Not valid data');
     const initialData: string = await fs.readFile(file, { encoding: 'utf-8' });
     const data: Joke[] = JSON.parse(initialData);
     info.id = String(Math.floor(Math.random() * 1000_000));
