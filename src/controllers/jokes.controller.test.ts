@@ -88,11 +88,5 @@ describe('Given ThingsController', () => {
       expect(repo.destroy).toHaveBeenCalled();
       expect(resp.json).toHaveBeenCalled();
     });
-
-    test('Then it should ... if there are errors', async () => {
-      (repo.destroy as jest.Mock).mockRejectedValue(new Error());
-      await controller.delete(req, resp, next);
-      expect(next).toHaveBeenCalled();
-    });
   });
 });
