@@ -44,7 +44,7 @@ export class JokesFileRepo implements Repo<Joke> {
 
     if (!updatedItem.id) throw new Error('Id not found');
     await fs.writeFile(file, JSON.stringify(finalData), 'utf-8');
-    return updatedItem as Joke;
+    return updatedItem;
   }
 
   async destroy(id: string): Promise<void> {
